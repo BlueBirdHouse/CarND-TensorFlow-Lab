@@ -3,51 +3,8 @@
 
 [<img src="http://yaroslavvb.com/upload/notMNIST/nmn.png" alt="notMNIST dataset samples" />](http://yaroslavvb.blogspot.com/2011/09/notmnist-dataset.html)
 
-We've prepared a Jupyter notebook that will guide you through the process of creating a single layer neural network in TensorFlow.
+It turns out an easy exercise. My accuracy is 81%. 
 
-## Windows Instructions
-#### Install Docker
-If you don't have Docker already, download and install Docker from [here](https://docs.docker.com/engine/installation/windows/).
-#### Clone the Repository
-Run the command below to clone the Lab Repository:
-```sh
-$ git clone https://github.com/udacity/CarND-TensorFlow-Lab.git
-```
-#### Run the Notebook using Docker
-Run the following command from the same directory as the command above.
-```sh
-$ docker run -it -p 8888:8888 -v `pwd`:/notebooks udacity/carnd-tensorflow-lab
-```
-#### View The Notebook
-Open a browser window and go [here](http://localhost:8888/notebooks/CarND-TensorFlow-Lab/lab.ipynb).  This is the notebook you'll be working on.  The notebook has 3 problems for you to solve:
- - Problem 1: Normalize the features
- - Problem 2: Use TensorFlow operations to create features, labels, weight, and biases tensors
- - Problem 3: Tune the learning rate, number of steps, and batch size for the best accuracy
+<img src="image\Problem3.JPG" width="480" alt="Accuracy" />
 
-This is a self-assessed lab.  Compare your answers to the solutions [here](https://github.com/udacity/CarND-TensorFlow-Lab/blob/master/solutions.ipynb).  If you have any difficulty completing the lab, Udacity provides a few services to answer any questions you might have.
-
-## OS X and Linux Instructions
-#### Install Anaconda
-This lab requires [Anaconda](https://www.continuum.io/downloads) and [Python 3.4](https://www.python.org/downloads/) or higher. If you don't meet all of these requirements, install the appropriate package(s).
-#### Run the Anaconda Environment
-Run these commands in your terminal to install all the requirements:
-```sh
-$ git clone https://github.com/udacity/CarND-TensorFlow-Lab.git
-$ conda env create -f CarND-TensorFlow-Lab/environment.yml
-$ conda install --name CarND-TensorFlow-Lab -c conda-forge tensorflow
-```
-#### Run the Notebook
-Run the following commands from the same directory as the commands above.
-```sh
-$ source activate CarND-TensorFlow-Lab
-$ jupyter notebook
-```
-#### View The Notebook
-Open a browser window and go [here](http://localhost:8888/notebooks/CarND-TensorFlow-Lab/lab.ipynb).  This is the notebook you'll be working on.  The notebook has 3 problems for you to solve:
- - Problem 1: Normalize the features
- - Problem 2: Use TensorFlow operations to create features, labels, weight, and biases tensors
- - Problem 3: Tune the learning rate, number of steps, and batch size for the best accuracy
-
-This is a self-assessed lab.  Compare your answers to the solutions [here](https://github.com/udacity/CarND-TensorFlow-Lab/blob/master/solutions.ipynb).  If you have any difficulty completing the lab, Udacity provides a few services to answer any questions you might have.
-## Help
-Remember that you can get assistance from your mentor, the Forums (click the link on the left side of the classroom), or the [Slack channel](https://carnd-slack.udacity.com). You can also review the concepts from the previous lessons.
+At first, the PIL cannot work with Python 3.6.3. So I use the ‘imread’ from ‘matplotlib.pyplot’. Then, the notMNIST data set contains many error figures. Many figures that are all black, which means every pixel equals 255. Obviously, they are useless for classifier. My function ‘deleteNan’ will remove these figures. At last, ‘normalize_grayscale’ can handle both vectors and matrices. I have not turned some parameters before I got an accuracy over 81%. 
