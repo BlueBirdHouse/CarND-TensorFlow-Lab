@@ -7,4 +7,4 @@ It turns out an easy exercise. My accuracy is 81%.
 
 <img src="image\Problem3.JPG" width="480" alt="Accuracy" />
 
-At first, the PIL cannot work with Python 3.6.3. So I use the ‘imread’ from ‘matplotlib.pyplot’. Then, the notMNIST data set contains many error figures. Many figures that are all black, which means every pixel equals 255. Obviously, they are useless for classifier. My function ‘deleteNan’ will remove these figures. At last, ‘normalize_grayscale’ can handle both vectors and matrices. I have not turned some parameters before I got an accuracy over 81%. 
+At first, the PIL cannot work with Python 3.6.3. So I use the ‘imread’ from ‘matplotlib.pyplot’. Then, the [notMNIST](http://yaroslavvb.blogspot.jp/2011/09/notmnist-dataset.html) data set contains many error figures. Many figures that are all black, which means every pixel equals 255. Obviously, they are useless for classifier. My function ‘deleteNan’ will remove these figures. At last, ‘normalize_grayscale’ can handle both vectors and matrices. I have not turned some parameters before I got an accuracy over 81%. 
